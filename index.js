@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 
 dotenv.config()
 
-mongoose.connect("mongodb+srv://Hampus:Hampus!23@hampusdatabase.r73oj.mongodb.net/Lab4Database?retryWrites=true&w=majority", {useUnifiedTopology: true, useNewUrlParse: true}, () => {
+mongoose.connect(process.env.DB_Connection, {useUnifiedTopology: true, useNewUrlParse: true}, () => {
     console.log("Connected!")
 })
 
